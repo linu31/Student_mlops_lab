@@ -1,0 +1,10 @@
+EXECUTION ORDER
+1. pip install -r requirements.txt
+2. python src/generate_data.py
+3. python src/feature_pipeline.py
+4. python src/train.py
+5. pytest -q
+6. uvicorn src.api:app --reload
+7. POST reports/sample_prediction.json to http://127.0.0.1:8000/predict
+8. mlflow ui --backend-store-uri ./mlruns
+9. Push all files to GitHub and capture Actions success screenshot.
